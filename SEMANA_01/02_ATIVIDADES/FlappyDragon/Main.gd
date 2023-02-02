@@ -6,12 +6,11 @@ var status = 1
 var vscore = 0
 #A variável vscore simboliza o score do jogador, dessa forma, com o progresso do personagem o score aumenta.
 
-var x = 4
+var x = 3
 #A variável x significa a velocidade no eixo x do personagem, então, se a variável x é aumentada a velocidade também é aumentada.
 
-var y = 1.5 
+var y = 2 
 #A variável y significa a velocidade no eixo y do personagem, então, se a variável y é aumentada a velocidade também é aumentada.
-
 # executa essa função ao carregar o jogo
 func _ready():
 	# oculta o "gameover"

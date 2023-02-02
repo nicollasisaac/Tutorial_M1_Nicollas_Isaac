@@ -1,9 +1,16 @@
 extends Node # instancia a classe Node2D
 
 var status = 1
+#A variável status simboliza o estado do jogo, se ele está rodando ou não.
+
 var vscore = 0
-var x = 1.5 
+#A variável vscore simboliza o score do jogador, dessa forma, com o progresso do personagem o score aumenta.
+
+var x = 4
+#A variável x significa a velocidade no eixo x do personagem, então, se a variável x é aumentada a velocidade também é aumentada.
+
 var y = 1.5 
+#A variável y significa a velocidade no eixo y do personagem, então, se a variável y é aumentada a velocidade também é aumentada.
 
 # executa essa função ao carregar o jogo
 func _ready():
@@ -55,7 +62,7 @@ func _process(delta):
 		# se apertou enter ou space, recomeça o jogo
 		if Input.is_action_pressed("ui_accept"):
 			$score.set_text("0") # zera o score
-			vscore = 0 # zera o score
+			vscore = 100 # zera o score
 			status = 1 # muda o status para "jogando"
 			$dragon/dragonImages.playing = true # faz dragão voltar a bater as asas
 			$dragon.position.y = 0 # volta o dragão para a posição original
@@ -72,7 +79,7 @@ func _on_columns_body_shape_entered(body_id, body, body_shape, local_shape):
 # executa essa função quando o dragão atravessa entre as colunas
 func _on_columns_body_shape_exited(body_id, body, body_shape, local_shape):
 	if (local_shape == 2): # esse node tem 3 shapes de colisão: 0 e 1 são as colunas
-		vscore += 1 # aumenta o score
+		vscore += 2 # aumenta o score
 		$score.set_text(str(vscore)) # atualiza o painel
 		
 

@@ -7,7 +7,7 @@ var numero = 0
 var lista = []
 
 #variável nome não foi declarada
-var nome = ""
+var nome := ""
 
 func _on_Button_pressed():
 	#Coletando dados inseridos pelo usuário
@@ -37,7 +37,7 @@ func _on_Button2_pressed():
 func _on_Button3_pressed():
 	#Mudando o nome do usuário de acordo com os dados da lista
 	#variável cont não foi declarada de maneira correta
-	var cont=0
+	var cont = 0
 	
 	#Se houver algum número ímpar o nome deve adicionar "baldo" ao final
 	for num in lista:
